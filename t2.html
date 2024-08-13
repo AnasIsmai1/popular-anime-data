@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime List</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/t1.css">
+    <link rel="stylesheet" href="./css/t1.css" />
 
+    <!-- Favicon -->
+    <link rel="icon" href="imgs/cloud.png">
 </head>
+
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                Anime List
-            </div>
+            <div class="logo"><a href="home.html">Anime List</a></div>
             <div class="btn-grp">
                 <button class="sigin" type="button">Sign Up</button>
                 <button class="login" type="button">Login</button>
@@ -23,7 +25,7 @@
     </header>
     <div class="container">
         <div class="go-back">
-            <a href="#">
+            <a href="home.html">
                 <i class="fa-solid fa-caret-left"></i>
                 Back
             </a>
@@ -33,9 +35,8 @@
     <div class="container">
         <main id="hero-section">
             <aside>
-                <img src="" alt="anime-cover-pic">
-                <div class="socials">
-                </div>
+                <img src="" alt="anime-cover-pic" />
+                <div class="socials"></div>
                 <div class="titles">
                     <h4>Alternative Titles</h4>
                     <ul>
@@ -48,10 +49,12 @@
                     <ul>
                         <li data-value="type"><strong>Type:</strong> TV</li>
                         <li data-value="episodes">Episodes: Episodes_Num</li>
-                        <li data-value="status">Status: Status</li>
-                        <li>Air: Air_Times</li>
-                        <li>Premiered: Prem_Date</li>
-                        <li>Brodcast: ...brod_times</li>
+                        <li data-value="Status">Status: Status</li>
+                        <li data-value="airing">Air: Air_Times</li>
+                        <li data-value="season" data-value2="year">
+                            Premiered: Prem_Date
+                        </li>
+                        <li data-value="broadcast">Brodcast: ...brod_times</li>
                         <li>Prod: ...Prod</li>
                         <li>licensors: ...li</li>
                         <li>Studios: ...Studios</li>
@@ -59,14 +62,18 @@
                         <li>Genres: ...Geners</li>
                         <li>Themes: ...Themes</li>
                         <li>Demographic: ...</li>
-                        <li data-value="duration"><strong>Duration:</strong> 23 Min. per Ep</li>
+                        <li data-value="duration">
+                            <strong>Duration:</strong> 23 Min. per Ep
+                        </li>
                         <li data-value="rating">Rating: Rating</li>
                     </ul>
                 </div>
                 <div class="statistics">
                     <h4>Statistics</h4>
                     <ul>
-                        <li data-value="score" data-value2="Users">Score: Score(num_scorers)</li>
+                        <li data-value="score" data-value2="Users">
+                            Score: Score(num_scorers)
+                        </li>
                         <li data-value="Rank">Ranked: rank</li>
                         <li data-value="Popularity">Popularity: pop_rank</li>
                         <li data-value="Members">Members: Num_Mem</li>
@@ -88,7 +95,9 @@
                             <li data-value="Members">mem</li>
                         </ul>
                         <ol>
-                            <li data-value="season" data-value2="year"><a href="">stat1</a></li>
+                            <li data-value="season" data-value2="year">
+                                <a href="">stat1</a>
+                            </li>
                             <li data-value="type"><a href="">stat2</a></li>
                             <li data-value="studio"><a href="">stat3</a></li>
                         </ol>
@@ -96,17 +105,103 @@
                 </div>
                 <div class="details synopsis">
                     <h3>Synopsis</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, iusto a nobis inventore earum illum quia saepe quam illo nam nulla repudiandae voluptatibus. Illo eaque, expedita voluptas ea est dolorem.</p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
+                        iusto a nobis inventore earum illum quia saepe quam illo nam nulla
+                        repudiandae voluptatibus. Illo eaque, expedita voluptas ea est
+                        dolorem.
+                    </p>
                 </div>
                 <div class="details background">
                     <h3>Background</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, iusto a nobis inventore earum illum quia saepe quam illo nam nulla repudiandae voluptatibus. Illo eaque, expedita voluptas ea est dolorem.</p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id,
+                        iusto a nobis inventore earum illum quia saepe quam illo nam nulla
+                        repudiandae voluptatibus. Illo eaque, expedita voluptas ea est
+                        dolorem.
+                    </p>
+                </div>
+                <div class="details characters">
+                    <h3>Characters <sup>1</sup></h3>
+                    <div class="boxes">
+                        <div class="box">
+                            <img src="#" alt="character_img" />
+                            <div class="character-details">
+                                <h4>Character Name</h4>
+                                <div class="va-details">
+                                    <span>VA Name</span>
+                                    <span>VA Language</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="#" alt="character_img" />
+                            <div class="character-details">
+                                <h4>Character Name</h4>
+                                <div class="va-details">
+                                    <span>VA Name</span>
+                                    <span>VA Language</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="#" alt="character_img" />
+                            <div class="character-details">
+                                <h4>Character Name</h4>
+                                <div class="va-details">
+                                    <span>VA Name</span>
+                                    <span>VA Language</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="#" alt="character_img" />
+                            <div class="character-details">
+                                <h4>Character Name</h4>
+                                <div class="va-details">
+                                    <span>VA Name</span>
+                                    <span>VA Language</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <img src="#" alt="character_img" />
+                            <div class="character-details">
+                                <h4>Character Name</h4>
+                                <div class="va-details">
+                                    <span>VA Name</span>
+                                    <span>VA Language</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
         </main>
     </div>
 
-    <script src="t2.js"></script>
+    <footer>
+        <img src="imgs/anime(2).jpg" alt="">
+        <div class="container">
+            <div class="upper-footer">
+                <div class="logo">
+                    <a href="#">Anime List</a>
+                </div>
+                <div class="socials">
+                    <p>Join Now</p>
+                    <a target="_blank" href="https://www.github.com/AnasIsmai1"><i class="fa-brands fa-github fa-2xl"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/a_ismail.ai"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                    <!-- <i class="fa-brands fa-linkedin fa-2xl"></i> -->
+                </div>
+            </div>
+            <p>Copyright &copy; anime-list.netlify.app since 2024. All Rights Reserved</p>
+            <p>This site does not store any files on its server. All contents are provided by non-affiliated third parties.</p>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/8b0ffb30b4.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

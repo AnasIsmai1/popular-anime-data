@@ -1,0 +1,397 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: #222;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(63, 57, 232);
+  text-transform: capitalize;
+}
+
+.container {
+  width: max(90%, 1400px);
+  margin: auto;
+}
+
+header {
+  background-color: #222;
+  padding: 24px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo {
+  display: inline;
+  cursor: pointer;
+  width: fit-content;
+  background-image: linear-gradient(to right, #7CB9E8, #6F00FF, rgb(63, 57, 232)) !important;
+  background-clip: text;
+  color: transparent;
+  font-family: "Akira Expanded", serif;
+  font-size: 1.875rem;
+}
+header .container a {
+  color: white;
+}
+header .container .search {
+  position: relative;
+}
+header .container #search-bar {
+  font-size: 1.125rem;
+  color: white;
+  padding: 0.75em 1rem;
+  width: 500px;
+  border: none;
+  background-color: #444;
+  border-radius: 0.5rem;
+}
+header .container #search-bar:focus-visible {
+  outline: #222 solid 1px;
+}
+header .container i {
+  color: #666;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .container .btn-grp {
+  padding-right: 1.5rem;
+  display: flex;
+  gap: 0.625rem;
+}
+header .container .btn-grp .login {
+  cursor: pointer;
+  font: inherit;
+  padding: 1em 2em;
+  color: #fff;
+  background-color: rgb(63, 57, 232);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+header .container .btn-grp .login:hover {
+  background-color: #6b67ed;
+  scale: 0.97;
+  box-shadow: 0px 10px rgba(0, 0, 0, 0.301);
+}
+header .container .btn-grp .sigin {
+  cursor: pointer;
+  font: inherit;
+  padding: 1em 2em;
+  color: #fff;
+  background-color: #555;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+header .container .btn-grp .sigin:hover {
+  background-color: #6f6f6f;
+  scale: 0.97;
+  box-shadow: 0px 10px rgba(0, 0, 0, 0.301);
+}
+
+#popular-anime {
+  margin-block-start: 3rem;
+}
+#popular-anime .container {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+#popular-anime .container span {
+  cursor: pointer;
+}
+#popular-anime .container img {
+  object-position: 0 30%;
+  object-fit: cover;
+  border-radius: 2rem;
+  height: 500px;
+}
+#popular-anime .container .anime-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#popular-anime .container .anime-details h2 {
+  font-size: 2.75rem;
+}
+#popular-anime .container .anime-details p {
+  color: #bbb;
+  font-size: 1.5rem;
+}
+#popular-anime .container .anime-details .small-icons {
+  margin-block: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+}
+#popular-anime .container .anime-details .small-icons p {
+  font-size: 0.9rem;
+}
+#popular-anime .container .anime-details .small-icons .rating {
+  border-radius: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  border: solid 1px #bbb;
+}
+#popular-anime .container .anime-details .small-icons .premier {
+  font-size: 1rem;
+}
+
+main .anime-showcase {
+  margin-block: 5rem;
+}
+main .anime-showcase h2 {
+  font-size: 3rem;
+  margin-block: 2rem;
+}
+main .anime-showcase .anime-titles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  row-gap: 50px;
+}
+main .anime-showcase .anime-card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  position: relative;
+}
+main .anime-showcase .anime-card img {
+  position: relative;
+  z-index: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  aspect-ratio: 3/4;
+}
+main .anime-showcase .anime-card span {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 25%;
+  transform: translate(-50% -50%);
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+main .anime-showcase .anime-card span:hover {
+  color: #6050DC;
+}
+main .anime-showcase .anime-card .banner::before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  aspect-ratio: 3/4;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease;
+}
+main .anime-showcase .anime-card .anime-name {
+  cursor: pointer;
+  color: #bbb;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  transition: 0.2s ease;
+}
+main .anime-showcase .anime-card .anime-name:hover {
+  color: #6050DC;
+}
+main .anime-showcase .anime-card .banner {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .anime-showcase .anime-card .banner .info {
+  padding: 0.25rem 0.5rem;
+  transform: skew(-10deg);
+}
+main .anime-showcase .anime-card .banner .info p {
+  color: #fff;
+  transform: skew(10deg);
+}
+main .anime-showcase .anime-card .banner .ep {
+  background-color: #6050DC;
+}
+main .anime-showcase .card-main:hover > .banner::before, main .anime-showcase span {
+  opacity: 1;
+}
+main .anime-showcase .card-main:hover > span {
+  opacity: 1;
+}
+main .anime-showcase span:hover + .banner::before {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+footer {
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  filter: saturate(0);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+footer .upper-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .container {
+  position: relative;
+  z-index: 1;
+}
+footer .logo a {
+  display: inline;
+  cursor: pointer;
+  width: fit-content;
+  background-image: linear-gradient(to right, #007FFF, rgb(63, 57, 232), #6F00FF, #5433ac) !important;
+  background-clip: text;
+  color: transparent;
+  font-family: "Akira Expanded", serif;
+  font-size: 1.875rem;
+}
+footer p {
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 25px;
+}
+footer .socials {
+  border-radius: 2rem;
+  background-color: #ddd;
+  align-self: flex-end;
+  display: inline-flex;
+  width: 225px;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+footer .socials i {
+  color: #111;
+}
+footer .socials p {
+  font-size: 1.125rem;
+  color: #111;
+  font-weight: 700;
+}
+
+@media (max-width: 1450px) {
+  #popular-anime .container {
+    position: relative;
+    width: 90%;
+    display: flex;
+  }
+  #popular-anime .container .anime-details {
+    position: absolute;
+    z-index: 2;
+    bottom: 1rem;
+    left: 2rem;
+    grid-row: 1;
+  }
+  #popular-anime .container span:nth-child(2) {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+  }
+  #popular-anime .container span:nth-child(2)::after {
+    border-radius: 2rem;
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.1) 90%);
+  }
+  .container {
+    width: 90%;
+  }
+  #top-anime .container .anime-showcase .anime-titles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  #top-anime .container .anime-showcase .anime-titles .anime-card {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  header .container .logo {
+    font-size: 2rem;
+  }
+  header .container .btn-grp .login {
+    font-size: 0.8rem;
+  }
+  header .container .btn-grp .sigin {
+    font-size: 0.8rem;
+  }
+  #popular-anime .container .anime-details {
+    width: 95%;
+    left: 1rem;
+  }
+  #popular-anime .container .anime-details h2 {
+    font-size: 1.5rem;
+  }
+  #popular-anime .container .anime-details p {
+    font-size: 0.9rem;
+  }
+  footer .container .upper-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  footer .container .upper-footer .logo {
+    order: 2;
+  }
+  footer .container .upper-footer .socials {
+    align-self: flex-start;
+    order: 1;
+  }
+}
+@media (max-width: 580px) {
+  header .container {
+    margin: 0;
+  }
+  header .container .btn-grp {
+    display: none;
+  }
+}
